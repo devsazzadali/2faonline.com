@@ -60,7 +60,7 @@ const App = () => {
       {/* হিরো সেকশনের নিচে ৩ কলামের হিস্ট্রি গ্রিড */}
       {showHistory && <History historyData={historyList} />}
 
-      <Ads />
+      {/* <Ads /> */}
       <FAGen />
       <End/>
     </div>
