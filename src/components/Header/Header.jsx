@@ -13,7 +13,7 @@ const Header = ({ onHistoryClick, historyCount, isDarkMode, onThemeToggle, onRef
         {/* Left Side: Brand */}
         <div className="brand">
           <div className="brand-logo">🛡️</div>
-          <div className="brand-name">2FA.Online</div>
+          <div className="brand-name">2FAOnline.com</div>
         </div>
 
         {/* Center Nav: Links */}
