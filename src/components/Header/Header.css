@@ -89,6 +89,7 @@ body.dark .mobile-menu { background: #1a1a1a; border-color: #333; }
   .desktop-nav, .desktop-only-buttons { display: none; }
   .hamburger { display: block; }
   .action-btn {display: none;}
+
 }
 
 @media (min-width: 769px) {
@@ -96,6 +97,8 @@ body.dark .mobile-menu { background: #1a1a1a; border-color: #333; }
   .mobile-menu { display: none; }
 }
 
+
+  .theme-toggle{display: none;}
 
 
 
