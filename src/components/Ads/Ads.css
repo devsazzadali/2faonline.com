@@ -1,0 +1,11 @@
+.ads-section {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: center; /* center horizontally */
+}
+
+.ads-image {
+  width: 80%;
+  border-radius: 8px;
+  display: block;
+}

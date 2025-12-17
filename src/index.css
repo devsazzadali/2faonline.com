@@ -1,0 +1,46 @@
+/* index.css */
+:root {
+  --bg-color: #f7f7fb;
+  --card-bg: #ffffff;
+  --text-main: #111827;
+  --border-color: #e6e9ef;
+}
+
+/* ডার্ক মোড যখন এক্টিভ হবে */
+body.dark {
+  --bg-color: #0b1120;       /* স্ক্রিনশটের মতো ডিপ নেভি ব্লু */
+  --card-bg: #111827;        /* বক্সের ব্যাকগ্রাউন্ড */
+  --text-main: #f9fafb;
+  --border-color: #1f2937;
+  
+  background-color: var(--bg-color) !important;
+  color: var(--text-main);
+  min-height: 100vh;         /* নিশ্চিত করবে পুরো স্ক্রিন ডার্ক থাকবে */
+  margin: 0;
+  padding: 0;
+}
+
+/* পুরো বডির ব্যাকগ্রাউন্ড ফিক্স */
+html, body {
+  height: 100%;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
+}
+
+/* বক্সগুলোর স্টাইল যা স্ক্রিনশটের মতো দেখাবে */
+body.dark .auth-card, 
+body.dark .history-container, 
+body.dark .how-to-use-section,
+body.dark .hero-section {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-main) !important;
+}
+
+/* বক্সের ভেতরের ইনপুট এবং অন্যান্য এলিমেন্ট */
+body.dark input, 
+body.dark textarea {
+  background-color: #030712 !important;
+  border: 1px solid var(--border-color) !important;
+  color: #fff !important;
+}

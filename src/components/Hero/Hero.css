@@ -1,0 +1,16 @@
+.hero {
+  text-align: center;
+  padding: 28px 0;
+}
+
+.hero h1 {
+  font-size: 28px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+}

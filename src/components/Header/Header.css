@@ -1,0 +1,111 @@
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+body.dark .header {
+  background: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.brand { display: flex; align-items: center; gap: 8px; }
+.brand-name { font-weight: 800; font-size: 20px; color: #000; }
+body.dark .brand-name { color: #fff; }
+
+.desktop-nav { display: flex; gap: 20px; }
+.desktop-nav a { text-decoration: none; color: #666; font-size: 14px; font-weight: 500; }
+
+.right-actions { display: flex; align-items: center; gap: 10px; }
+
+.action-btn, .theme-toggle, .hamburger {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #333;
+}
+
+body.dark .action-btn, body.dark .theme-toggle, body.dark .hamburger {
+  background: #2d2d2d;
+  border-color: #444;
+  color: #fff;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  right: 20px;
+  width: 280px;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+body.dark .mobile-menu { background: #1a1a1a; border-color: #333; }
+
+.mobile-links a { display: block; padding: 10px; color: #555; text-decoration: none; }
+.mobile-btn {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #f0f0f0;
+  background: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.delete-btn { color: #dc3545; }
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .desktop-nav, .desktop-only-buttons { display: none; }
+  .hamburger { display: block; }
+}
+
+@media (min-width: 769px) {
+  .hamburger { display: none; }
+  .mobile-menu { display: none; }
+}
+
+
+
+
+
+.right-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between theme toggle & buttons */
+}
+
+.desktop-only-buttons {
+  display: flex;
+  gap: 8px; /* space between History & Refresh buttons */
+}

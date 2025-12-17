@@ -1,0 +1,143 @@
+.auth-container {
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.auth-card {
+  width: 400px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.label-text {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.input-box {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.code-box {
+  background-color: #f9fafb;
+  border: 1px solid #f3f4f6;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.otp-code {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
+}
+
+.active-blue { color: #2563eb; }
+.inactive-gray { color: #9ca3af; }
+
+.status-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-badge {
+  background: #000;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.icon-btn, .enter-secret-label {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #4b5563;
+}
+
+.del-btn {
+  width: 100%;
+  background: none;
+  border: 1px solid #fee2e2;
+  color: #ef4444;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bottom-timer {
+  margin-top: 32px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px 32px;
+  background: #fff;
+}
+
+.timer-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.time-digit { font-size: 20px; line-height: 1; }
+.time-sub { font-size: 11px; color: #6b7280; }
+
+.progress-bg {
+  width: 60px;
+  height: 6px;
+  background: #f3f4f6;
+  border-radius: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 10px;
+  transition: width 1s linear;
+}
+
+.add-more-btn {
+  margin-top: 24px;
+  background: #111827;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
