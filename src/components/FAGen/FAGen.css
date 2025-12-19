@@ -1,6 +1,6 @@
 .auth-container {
   background-color: #ffffff;
-  min-height: 100vh;
+  min-height: 50vh;
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
