@@ -141,3 +141,21 @@
   border: none;
   cursor: pointer;
 }
+
+
+
+
+/* Optional */
+
+/* @media (max-width: 640px) {
+.bottom-timer { padding: 15px 90px; }
+.time-digit { font-size: 16px; }
+.progress-bg { width: 40px; height: 5px;}
+}
+
+
+@media (min-width: 641px) and (max-width: 1023px) {
+.bottom-timer { padding: 15px 100px; }
+.time-digit { font-size: 17px; }
+.progress-bg { width: 50px; height: 6px;}
+} */
