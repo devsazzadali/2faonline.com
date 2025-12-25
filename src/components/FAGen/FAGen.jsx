@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './FAGen.css';
 
-const Authenticator = () => {
+// onAccountDeleted প্রপটি রিসিভ করা হচ্ছে যা App.js থেকে আসবে
+const Authenticator = ({ onAccountDeleted }) => {
   const [accounts, setAccounts] = useState(() => {
     const saved = localStorage.getItem('2fa_accounts_v1');
     return saved
@@ -12,14 +13,12 @@ const Authenticator = () => {
   const [timeLeft, setTimeLeft] = useState(30);
   const [otplibLoaded, setOtplibLoaded] = useState(false);
 
-  // otplib লোড হয়েছে কিনা চেক করা
   useEffect(() => {
     const check = () => {
       if (window.otplib?.authenticator?.generate) {
         setOtplibLoaded(true);
       }
     };
-
     check();
     if (!otplibLoaded) {
       const timer = setInterval(check, 200);
@@ -27,12 +26,10 @@ const Authenticator = () => {
     }
   }, [otplibLoaded]);
 
-  // localStorage-এ সেভ করা
   useEffect(() => {
     localStorage.setItem('2fa_accounts_v1', JSON.stringify(accounts));
   }, [accounts]);
 
-  // TOTP কোড এবং টাইমার আপডেট (প্রতি সেকেন্ডে)
   useEffect(() => {
     if (!otplibLoaded) return;
 
@@ -55,7 +52,6 @@ const Authenticator = () => {
           return { ...acc, code: '------', active: false };
         });
 
-        // শুধু কোড চেঞ্জ হলে আপডেট করো (loop এড়ানোর জন্য)
         const prevCodes = prevAccounts.map(a => a.code);
         const newCodes = updated.map(a => a.code);
         return JSON.stringify(prevCodes) === JSON.stringify(newCodes) ? prevAccounts : updated;
@@ -65,7 +61,7 @@ const Authenticator = () => {
     updateCodes();
     const interval = setInterval(updateCodes, 1000);
     return () => clearInterval(interval);
-  }, [otplibLoaded]); // শুধু otplib লোড হলে চালু হবে
+  }, [otplibLoaded]);
 
   const addAccount = () => {
     setAccounts([
@@ -74,7 +70,15 @@ const Authenticator = () => {
     ]);
   };
 
+  // অ্যাডজাস্ট করা রিমুভ ফাংশন
   const removeAccount = (id) => {
+    const accountToRemove = accounts.find(acc => acc.id === id);
+    
+    // ডিলিট করার আগে যদি সিক্রেট থাকে, তবে হিস্ট্রিতে পাঠানো হচ্ছে
+    if (accountToRemove && accountToRemove.secret && onAccountDeleted) {
+      onAccountDeleted(accountToRemove);
+    }
+
     const filtered = accounts.filter(acc => acc.id !== id);
     setAccounts(filtered.length > 0
       ? filtered
@@ -82,18 +86,12 @@ const Authenticator = () => {
     );
   };
 
-  const toggleSecretVisibility = (id) => {
-    setAccounts(accounts.map(a =>
-      a.id === id ? { ...a, showSecret: !a.showSecret } : a
-    ));
-  };
-
   const copyToClipboard = async (code) => {
     try {
       await navigator.clipboard.writeText(code);
       alert(`Copied: ${code}`);
     } catch (err) {
-      alert('Copy failed – ম্যানুয়ালি কপি করো।');
+      alert('Copy failed.');
     }
   };
 
@@ -137,14 +135,6 @@ const Authenticator = () => {
                     setAccounts(accounts.map(a => a.id === acc.id ? { ...a, secret: e.target.value } : a))
                   }
                 />
-                {/* <button
-                  type="button"
-                  className="icon-btn"
-                  onClick={() => toggleSecretVisibility(acc.id)}
-                  style={{ marginLeft: '8px' }}
-                >
-                  {acc.showSecret ? '👁️' : '👁️‍🗨️'}
-                </button> */}
               </div>
             </div>
 

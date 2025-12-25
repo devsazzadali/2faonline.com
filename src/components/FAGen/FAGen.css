@@ -159,3 +159,38 @@
 .time-digit { font-size: 17px; }
 .progress-bg { width: 50px; height: 6px;}
 } */
+
+@media (max-width: 640px) {
+  /* কার্ডের ভেতরের প্যাডিং কমানো */
+  .auth-card {
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  /* ওটিপি কোড টেক্সট ছোট করা */
+  .otp-code {
+    font-size: 20px; /* মোবাইলে বড় টেক্সট স্ক্রিন ভেঙে ফেলে */
+    letter-spacing: 2px;
+  }
+
+  /* ইনপুট বক্স ছোট করা */
+  .input-box {
+    padding: 6px 8px;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  /* টাইমার সেকশন ছোট করা */
+  .bottom-timer {
+    padding: 10px 15px;
+    margin-top: 20px;
+  }
+  
+  .time-digit {
+    font-size: 16px;
+  }
+
+  .progress-bg {
+    width: 40px;
+  }
+}

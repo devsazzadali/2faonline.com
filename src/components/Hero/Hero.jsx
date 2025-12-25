@@ -4,7 +4,7 @@ import './Hero.css'
 const Hero = () => {
   return (
     <section className="hero">
-      <h1>Free 2FA Code Generator</h1>
+      <h1>2FA  Online – Free Online 2FA Code Generator</h1>
       <p style={{ color: "var(--muted)", marginTop: "6px" }}>
         Generate TOTP codes instantly from your secret keys — secure, fast, works offline in your browser
       </p>

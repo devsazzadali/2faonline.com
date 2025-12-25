@@ -17,12 +17,12 @@ const End = () => {
         </ul>
       </section>
 
-      {/* Pro Ads Main Blue Section */}
+      {/* Account Store One Main Blue Section */}
       <section className="pro-ads-container">
         <div className="pro-ads-header">
           <div className="brand">
             <span className="brand-icon">📱</span> 
-            <span className="brand-name">Pro Ads</span>
+            <span className="brand-name">Account Store One</span>
             <span className="premium-tag">Premium Partner</span>
           </div>
           <h4>Professional Facebook Advertising Solutions</h4>
@@ -34,7 +34,7 @@ const End = () => {
             <span className="warning-icon">⚠️</span>
             <div>
               <strong>Tired of Facebook ad account bans and restrictions?</strong>
-              <p>Pro Ads provides verified business managers, aged profiles, and high-trust advertising assets that help thousands of marketers scale their campaigns without interruption.</p>
+              <p>Account Store One provides verified business managers, aged profiles, and high-trust advertising assets that help thousands of marketers scale their campaigns without interruption.</p>
             </div>
           </div>
         </div>
@@ -60,10 +60,10 @@ const End = () => {
 
         {/* Bottom Text and Button */}
         <div className="pro-ads-footer">
-          <p>Join over 5,000+ successful marketers who rely on Pro Ads for their advertising infrastructure. 24/7 support and competitive pricing included.</p>
+          <p>Join over 5,000+ successful marketers who rely on Account Store One for their advertising infrastructure. 24/7 support and competitive pricing included.</p>
           
           <div className="footer-actions">
-            <a href="#" className="visit-btn">Visit Pro Ads →</a>
+            <a href="http://accountstoreone.com/" className="visit-btn">account store one →</a>
             <span className="badge-outline blue-text">24/7 Support</span>
             <span className="badge-outline green-text">5,000+ Customers</span>
           </div>
