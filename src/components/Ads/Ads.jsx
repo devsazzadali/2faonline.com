@@ -5,7 +5,7 @@ const Ads = () => {
   return (
     <section className="card ads-section" id="ads">
       <img 
-        src="/image/ads-top.jpg" 
+        src="/image/ads-top.png" 
         alt="ads" 
         className="ads-image"
       />
